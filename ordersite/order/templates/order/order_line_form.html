@@ -1,0 +1,9 @@
+
+<div class="center-box">
+    <h3 class="full-header" style="text-align: center;">Order: {{ order.shop.name }} {{ order.order_date}}  </h3>
+    <form action="" method="post">
+        {% csrf_token %}
+            {{ form.as_p }}
+        <input class="center-button" type="submit" value="Submit">
+    </form>
+</div>

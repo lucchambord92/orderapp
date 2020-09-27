@@ -1,0 +1,13 @@
+<h1>Order Detail</h1> 
+<h2>{{ order.shop }} - {{ order.order_date }} </h2>
+
+
+
+<div style="margin-left:20px;margin-top:20px">
+    {% for order_line in order.order_line_set.all %}
+        <hr>
+         <p>{{order_line.product.name}} - {{order_line.quantity}} - {{order_line.unit_price}} </p>
+    {% endfor %}
+    <a href="{% url 'order:order_line_create' pk=order.pk %}">Add</a>
+
+</div>

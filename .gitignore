@@ -1,0 +1,8 @@
+*.pyc
+*~
+/.vscode
+__pycache__
+orderve
+db.sqlite3
+.DS_Store
+

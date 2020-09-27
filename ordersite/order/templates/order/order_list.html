@@ -1,0 +1,14 @@
+
+<h2> Orders </h2>
+
+ 
+<div>
+    <p></p>
+    {% for order in order_list %}
+        <div>
+            <p>
+                <a href="{% url 'order:order_detail' pk=order.pk %}">{{ order.shop }} - {{ order.order_date }}</a>
+            </p>
+        </div>    
+    {% endfor %}   
+</div>
